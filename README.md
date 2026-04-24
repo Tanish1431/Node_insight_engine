@@ -2,6 +2,19 @@
 
 A full-stack web application that accepts hierarchical relationships in the format `X->Y`, validates them, constructs directed graph structures, detects cycles, and generates structured tree visualizations.
 
+## Live Demo
+
+- **Frontend URL**: [Insert Frontend URL here](https://your-frontend-url.com)
+- **Backend API**: [Insert Backend URL here](https://your-backend-url.com)
+
+## Screenshots
+
+### Application Interface
+![NodeGraph Interface](./assets/nodegraph_ui.png)
+
+### Architecture Diagram
+![NodeGraph Architecture](./assets/nodegraph_architecture.png)
+
 ## Architecture
 
 ```
