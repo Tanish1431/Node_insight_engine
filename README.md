@@ -10,7 +10,8 @@ A full-stack web application that accepts hierarchical relationships in the form
 ## Screenshots
 
 ### Application Interface
-![NodeGraph Interface](./assets/nodegraph_ui.png)
+![NodeGraph Interface Input](./assets/app_interface_1.png)
+![NodeGraph Interface Visualization](./assets/app_interface_2.png)
 
 ### Architecture Diagram
 ![NodeGraph Architecture](./assets/nodegraph_architecture.png)
