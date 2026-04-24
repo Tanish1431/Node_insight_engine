@@ -1,0 +1,14 @@
+{
+  "name": "nodegraph-insight-engine-root",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Root package for easy deployment to Render",
+  "scripts": {
+    "install": "cd backend && npm install",
+    "build": "cd backend && npm install",
+    "start": "cd backend && npm start"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
