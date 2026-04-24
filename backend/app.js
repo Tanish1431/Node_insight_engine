@@ -18,9 +18,25 @@ app.use((req, _res, next) => {
 // ─── Routes ──────────────────────────────────────────────────
 app.use('/bfhl', bfhlRouter);
 
-// Health check
-app.get('/', (_req, res) => {
-  res.json({ status: 'ok', service: 'NodeGraph Insight Engine' });
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+// Define __dirname for ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// ─── Serve Frontend ──────────────────────────────────────────
+// Serve static files from the React frontend build
+app.use(express.static(path.join(__dirname, '../frontend/dist')));
+
+// Health check (Optional, kept at an api-specific route if needed, but we'll override GET /)
+app.get('/api/health', (_req, res) => {
+  res.json({ status: 'ok', service: 'NodeGraph Insight Engine API' });
+});
+
+// All other GET requests not handled before will return the React app
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
 });
 
 // ─── Centralized Error Handler ───────────────────────────────

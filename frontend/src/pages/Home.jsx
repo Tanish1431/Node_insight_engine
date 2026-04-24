@@ -4,8 +4,8 @@ import SummaryCard from '../components/SummaryCard.jsx';
 import TreeView from '../components/TreeView.jsx';
 import ResultsPanel from '../components/ResultsPanel.jsx';
 
-// API base URL — uses local dev server or deployed backend
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+// API base URL — uses local dev server or relative path in production
+const API_URL = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? '' : 'http://localhost:3000');
 
 export default function Home() {
   const [result, setResult] = useState(null);
